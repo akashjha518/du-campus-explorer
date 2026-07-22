@@ -1,0 +1,48 @@
+<resources>
+
+    <!-- 🌞 Light theme colors -->
+    <color name="md_theme_light_primary">#1976D2</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_light_primaryContainer">#E3F2FD</color>
+    <color name="md_theme_light_onPrimaryContainer">#0D47A1</color>
+
+    <color name="md_theme_light_secondary">#26A69A</color>
+    <color name="md_theme_light_onSecondary">#FFFFFF</color>
+    <color name="md_theme_light_secondaryContainer">#B2DFDB</color>
+    <color name="md_theme_light_onSecondaryContainer">#004D40</color>
+
+    <color name="md_theme_light_background">#F9FAFB</color>
+    <color name="md_theme_light_onBackground">#121212</color>
+    <color name="md_theme_light_surface">#FFFFFF</color>
+    <color name="md_theme_light_onSurface">#1C1B1F</color>
+
+    <color name="md_theme_light_error">#D32F2F</color>
+    <color name="md_theme_light_onError">#FFFFFF</color>
+    <color name="md_theme_light_errorContainer">#FFCDD2</color>
+    <color name="md_theme_light_onErrorContainer">#B71C1C</color>
+
+    <!-- 🌚 Dark theme colors -->
+    <color name="md_theme_dark_primary">#90CAF9</color>
+    <color name="md_theme_dark_onPrimary">#0D47A1</color>
+    <color name="md_theme_dark_primaryContainer">#1565C0</color>
+    <color name="md_theme_dark_onPrimaryContainer">#E3F2FD</color>
+
+    <color name="md_theme_dark_secondary">#80CBC4</color>
+    <color name="md_theme_dark_onSecondary">#004D40</color>
+    <color name="md_theme_dark_secondaryContainer">#004D40</color>
+    <color name="md_theme_dark_onSecondaryContainer">#B2DFDB</color>
+
+    <color name="md_theme_dark_background">#121212</color>
+    <color name="md_theme_dark_onBackground">#FFFFFF</color>
+    <color name="md_theme_dark_surface">#1E1E1E</color>
+    <color name="md_theme_dark_onSurface">#E0E0E0</color>
+
+    <color name="md_theme_dark_error">#EF5350</color>
+    <color name="md_theme_dark_onError">#FFFFFF</color>
+    <color name="md_theme_dark_errorContainer">#B00020</color>
+    <color name="md_theme_dark_onErrorContainer">#FFCDD2</color>
+    <color name="md_theme_text_on_teal">#FFFFFF</color>
+    <color name="md_theme_text_on_teal_light">#212121</color>
+
+
+</resources>

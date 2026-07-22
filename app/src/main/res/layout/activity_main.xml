@@ -1,0 +1,294 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    tools:context=".MainActivity">
+
+    <!-- Material Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorSecondary"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="?android:attr/textColorSecondary"
+        app:popupTheme="@style/Theme.SouthCampus">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="16dp">
+
+            <ImageView
+                android:id="@+id/logo_image"
+                android:layout_width="@dimen/toolbar_icon_size"
+                android:layout_height="@dimen/toolbar_icon_size"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:contentDescription="@string/app_logo"
+                android:src="@drawable/ic_logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/logo_image"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    style="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/south_campus"
+                    android:textColor="?android:attr/textColorSecondary" />
+
+                <TextView
+                    android:id="@+id/toolbar_subtitle"
+                    style="@style/TextAppearance.MaterialComponents.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/navigate_learn_explore"
+                    android:textColor="?android:attr/textColorSecondary"
+                    tools:ignore="TextContrastCheck" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <!-- Main Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_toolbar">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="?android:attr/colorBackground"
+            app:cardBackgroundColor="?android:attr/colorBackground"
+            app:cardCornerRadius="0dp">
+
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/grid_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="?android:attr/colorBackground"
+                android:padding="@dimen/padding_medium"
+                app:columnCount="2"
+                app:rowCount="4">
+
+                <!-- Helper Template for Buttons -->
+                <!-- Copy the style and change only id, text, drawableTop -->
+
+                <!-- Academic Resources -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_academic"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="160dp"
+                    android:layout_height="@dimen/grid_button_height"
+                    android:layout_margin="@dimen/margin_small"
+                    android:background="#62407F83"
+                    android:drawableTop="@drawable/ic_academic_resources1"
+                    android:gravity="center"
+                    android:text="@string/academic_resources"
+                    android:textAlignment="center"
+                    android:textColor="?android:attr/textColorPrimary"
+                    app:backgroundTint="@null"
+                    app:cornerRadius="@null"
+                    app:icon="@drawable/ic_academic_resources1"
+                    app:iconGravity="textTop"
+                    app:iconSize="@dimen/grid_icon_size"
+                    app:iconTint="@null"
+                    app:iconTintMode="multiply"
+                    app:layout_columnSpan="1"
+                    app:layout_gravity="fill"
+                    app:strokeColor="?attr/colorSecondary"
+                    tools:ignore="TextContrastCheck" />
+
+                <!-- Campus Navigation -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_navigation"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="160dp"
+                    android:layout_height="@dimen/grid_button_height"
+                    android:layout_margin="@dimen/margin_small"
+                    android:background="#62407F83"
+                    android:drawableTop="@drawable/ic_campus_navigation2"
+                    android:gravity="center"
+                    android:text="@string/campus_navigation"
+                    android:textAlignment="center"
+                    android:textColor="?android:attr/textColorPrimary"
+                    app:backgroundTint="@null"
+                    app:icon="@drawable/ic_campus_navigation2"
+                    app:iconGravity="textTop"
+                    app:iconSize="@dimen/grid_icon_size"
+                    app:iconTint="@null"
+                    app:iconTintMode="multiply"
+                    app:layout_columnSpan="1"
+                    app:layout_gravity="fill"
+                    app:strokeColor="?attr/colorSecondary"
+                    tools:ignore="TextContrastCheck" />
+
+                <!-- Transport Information -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_transport"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="160dp"
+                    android:layout_height="@dimen/grid_button_height"
+                    android:layout_margin="@dimen/margin_small"
+                    android:background="#62407F83"
+                    android:drawableTop="@drawable/ic_transport_info1"
+                    android:gravity="center"
+                    android:text="@string/transport_info"
+                    android:textAlignment="center"
+                    android:textColor="?android:attr/textColorPrimary"
+                    app:backgroundTint="@null"
+                    app:icon="@drawable/ic_transport_info1"
+                    app:iconGravity="textTop"
+                    app:iconSize="@dimen/grid_icon_size"
+                    app:iconTint="@null"
+                    app:iconTintMode="multiply"
+                    app:layout_columnSpan="1"
+                    app:layout_gravity="fill"
+                    app:strokeColor="?attr/colorSecondary"
+                    tools:ignore="TextContrastCheck" />
+
+                <!-- Hostel Details -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_hostel"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="160dp"
+                    android:layout_height="@dimen/grid_button_height"
+                    android:layout_margin="@dimen/margin_small"
+                    android:background="#62407F83"
+                    android:drawableTop="@drawable/ic_hostel_details1"
+                    android:gravity="center"
+                    android:text="@string/hostel_details"
+                    android:textAlignment="center"
+                    android:textColor="?android:attr/textColorPrimary"
+                    app:backgroundTint="@null"
+                    app:icon="@drawable/ic_hostel_details1"
+                    app:iconGravity="textTop"
+                    app:iconSize="@dimen/grid_icon_size"
+                    app:iconTint="@null"
+                    app:iconTintMode="multiply"
+                    app:layout_columnSpan="1"
+                    app:layout_gravity="fill"
+                    app:strokeColor="?attr/colorSecondary"
+                    tools:ignore="TextContrastCheck" />
+
+                <!-- Cafeteria Information -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_cafeteria"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="160dp"
+                    android:layout_height="@dimen/grid_button_height"
+                    android:layout_margin="@dimen/margin_small"
+                    android:background="#62407F83"
+                    android:drawableTop="@drawable/ic_cafeteria_menu1"
+                    android:gravity="center"
+                    android:text="@string/cafetria_info"
+                    android:textAlignment="center"
+                    android:textColor="?android:attr/textColorPrimary"
+                    app:backgroundTint="@null"
+                    app:icon="@drawable/ic_cafeteria_menu1"
+                    app:iconGravity="textTop"
+                    app:iconSize="@dimen/grid_icon_size"
+                    app:iconTint="@null"
+                    app:iconTintMode="multiply"
+                    app:layout_columnSpan="1"
+                    app:layout_gravity="fill"
+                    app:strokeColor="?attr/colorSecondary"
+                    tools:ignore="TextSizeCheck,TextContrastCheck" />
+
+                <!-- Event Updates -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_events"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="160dp"
+                    android:layout_height="@dimen/grid_button_height"
+                    android:layout_margin="@dimen/margin_small"
+                    android:background="#62407F83"
+                    android:drawableTop="@drawable/ic_event_updates"
+                    android:gravity="center"
+                    android:text="@string/event_updates"
+                    android:textAlignment="center"
+                    android:textColor="?android:attr/textColorPrimary"
+                    app:backgroundTint="@null"
+                    app:icon="@drawable/ic_event_updates"
+                    app:iconGravity="textTop"
+                    app:iconSize="@dimen/grid_icon_size"
+                    app:iconTint="@null"
+                    app:iconTintMode="multiply"
+                    app:layout_columnSpan="1"
+                    app:layout_gravity="fill"
+                    app:strokeColor="?attr/colorSecondary"
+                    tools:ignore="TextSizeCheck,TextContrastCheck" />
+
+                <!-- Facility Complaints -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_facility"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="160dp"
+                    android:layout_height="@dimen/grid_button_height"
+                    android:layout_margin="@dimen/margin_small"
+                    android:background="#62407F83"
+                    android:drawableTop="@drawable/ic_facility_complaints"
+                    android:gravity="center"
+                    android:text="@string/facility_complaints"
+                    android:textAlignment="center"
+                    android:textColor="?android:attr/textColorPrimary"
+                    app:backgroundTint="@null"
+                    app:icon="@drawable/ic_facility_complaints"
+                    app:iconGravity="textTop"
+                    app:iconSize="@dimen/grid_icon_size"
+                    app:iconTint="@null"
+                    app:iconTintMode="multiply"
+                    app:layout_columnSpan="1"
+                    app:layout_gravity="fill"
+                    app:strokeColor="?attr/colorSecondary"
+                    app:cornerRadius="16dp"
+                    tools:ignore="TextContrastCheck" />
+
+
+
+
+            </androidx.gridlayout.widget.GridLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface"
+        app:itemActiveIndicatorStyle="@null"
+        app:itemRippleColor="?attr/colorSecondaryContainer"
+        app:itemTextColor="?android:attr/textColorPrimary"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

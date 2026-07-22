@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.SouthCampus" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/md_theme_dark_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_dark_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_dark_onPrimaryContainer</item>
+
+        <item name="colorSecondary">@color/md_theme_dark_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_dark_onSecondary</item>
+
+        <item name="android:statusBarColor" tools:targetApi="34">@color/md_theme_dark_primary</item>
+        <item name="android:navigationBarColor" tools:targetApi="34">@color/md_theme_dark_primary</item>
+
+<!--        <item name="fontFamily">@font/your_custom_font</item>-->
+
+        <item name="android:colorBackground">@color/md_theme_dark_background</item>
+        <item name="colorSurface">@color/md_theme_dark_surface</item>
+        <item name="colorOnBackground">@color/md_theme_dark_onBackground</item>
+        <item name="colorOnSurface">@color/md_theme_dark_onSurface</item>
+
+        <!--        Text Color for Background -->
+        <item name="android:textColorSecondary">@color/md_theme_text_on_teal_light</item>
+    </style>
+
+    <style name="Theme.SouthCampus" parent="Base.Theme.SouthCampus"/>
+
+    <style name="NoActiveIndicatorStyle" parent="">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+</resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorSecondary"
+        android:elevation="4dp"
+        app:navigationIcon="@drawable/ic_back_arrow"
+        app:popupTheme="@style/Theme.SouthCampus"
+        app:titleTextColor="?android:attr/textColorSecondary" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!--    </ScrollView>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottom_navigation"
+            android:layout_below="@+id/my_toolbar"
+            android:layout_marginTop="55dp"
+            android:layout_marginBottom="195dp"
+            android:orientation="vertical"
+            tools:ignore="ObsoleteLayoutParam">
+
+
+            <!--                    <TextView-->
+            <!--                        android:id="@+id/academic_title"-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_gravity="center"-->
+            <!--                        android:layout_marginBottom="16dp"-->
+            <!--                        android:text="@string/academic_resources"-->
+            <!--                        android:textSize="22sp"-->
+            <!--                        android:textStyle="bold" />-->
+
+            <Button
+                android:id="@+id/btn_syllabus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#62407F83"
+                android:text="@string/view_syllabus"
+                android:textColor="?android:attr/textColorPrimary"
+                tools:ignore="VisualLintButtonSize,TextContrastCheck" />
+
+            <Button
+                android:id="@+id/btn_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#62407F83"
+                android:text="@string/download_notes"
+                android:textColor="?android:attr/textColorPrimary"
+                tools:ignore="VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/btn_papers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#62407F83"
+                android:text="@string/previous_year_papers"
+                android:textColor="?android:attr/textColorPrimary"
+                tools:ignore="VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/btn_timetable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#62407F83"
+                android:text="@string/class_timetable"
+                android:textColor="?android:attr/textColorPrimary"
+                tools:ignore="VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/btn_faculty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#62407F83"
+                android:text="@string/faculty_contacts"
+                android:textColor="?android:attr/textColorPrimary"
+                tools:ignore="VisualLintButtonSize" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="3dp"
+        app:itemActiveIndicatorStyle="@style/NoActiveIndicatorStyle"
+        app:menu="@menu/bottom_nav_menu"
+        tools:ignore="VisualLintBottomNav" />
+</RelativeLayout>

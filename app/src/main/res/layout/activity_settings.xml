@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    tools:context=".SettingsActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorSecondary"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back_arrow"
+        app:popupTheme="@style/Theme.SouthCampus"
+        app:titleTextColor="?android:attr/textColorSecondary" />
+
+    <ScrollView
+        android:id="@+id/settings_scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Settings Items -->
+            <TextView
+                style="@style/TextAppearance.Material3.BodyLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="12dp"
+                android:text="@string/notifications"
+                android:textColor="?android:attr/textColorPrimary" />
+
+            <TextView
+                style="@style/TextAppearance.Material3.BodyLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="12dp"
+                android:text="@string/language"
+                android:textColor="?android:attr/textColorPrimary" />
+
+            <TextView
+                style="@style/TextAppearance.Material3.BodyLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="12dp"
+                android:text="@string/privacy_policy"
+                android:textColor="?android:attr/textColorPrimary" />
+
+            <TextView
+                style="@style/TextAppearance.Material3.BodyLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="12dp"
+                android:text="@string/about_the_app"
+                android:textColor="?android:attr/textColorPrimary" />
+
+            <!-- Theme Selection -->
+            <TextView
+                style="@style/TextAppearance.Material3.BodyLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="12dp"
+                android:text="@string/select_theme"
+                android:textColor="?android:attr/textColorPrimary" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/theme_toggle_group"
+                android:layout_width="293dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp"
+                app:checkedButton="@id/btn_theme_system"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_theme_light"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:minWidth="0dp"
+                    android:text="@string/light"
+                    app:icon="@drawable/ic_sun"
+                    app:iconGravity="textTop"
+                    app:iconPadding="4dp"
+                    app:iconTint="?attr/colorOnSurface" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_theme_dark"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:minWidth="0dp"
+                    android:text="@string/dark"
+                    app:icon="@drawable/ic_moon"
+                    app:iconGravity="textTop"
+                    app:iconPadding="4dp"
+                    app:iconTint="?attr/colorOnSurface" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_theme_system"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:minWidth="0dp"
+                    android:text="@string/system"
+                    app:icon="@drawable/ic_system"
+                    app:iconGravity="textTop"
+                    app:iconPadding="4dp"
+                    app:iconTint="?attr/colorOnSurface" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <!-- Logout Button -->
+<!--            <com.google.android.material.button.MaterialButton-->
+<!--                android:id="@+id/btn_logout"-->
+<!--                style="@style/Widget.Material3.Button.OutlinedButton"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="start"-->
+<!--                android:layout_marginTop="24dp"-->
+<!--                android:paddingVertical="12dp"-->
+<!--                android:text="@string/logout"-->
+<!--                app:icon="@drawable/ic_logout"-->
+<!--                app:iconGravity="textStart"-->
+<!--                app:iconTint="?attr/colorSecondary"-->
+<!--                app:strokeColor="?attr/colorSecondary"-->
+<!--                tools:ignore="TextContrastCheck" />-->
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

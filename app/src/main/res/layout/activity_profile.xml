@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    android:orientation="vertical"
+    tools:context=".ProfileActivity">
+
+
+    <!-- Custom Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorSecondary"
+        android:elevation="4dp"
+        app:navigationIcon="@drawable/ic_back_arrow"
+        app:popupTheme="@style/Theme.SouthCampus"
+
+        app:titleTextColor="?android:attr/textColorSecondary" />
+
+    <!-- Profile Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/my_toolbar"
+        android:layout_above="@id/bottom_navigation"
+        android:padding="16dp"
+        tools:ignore="NotSibling">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- User Avatar -->
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/profile_picture"
+                android:src="@drawable/ic_profile_avatar" />
+
+            <!-- Name -->
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/name_akash_jha"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="18sp" />
+
+            <!-- Email -->
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/email_akash_example_com"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="16sp" />
+
+            <!-- Phone -->
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/phone_91_xxxxxxxxxx"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="16sp" />
+
+            <!-- Course -->
+            <TextView
+                android:id="@+id/tv_course"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/course_b_sc_hons_computer_science"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="16sp" />
+
+            <!-- College -->
+            <TextView
+                android:id="@+id/tv_college"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/college_university_of_delhi_south_campus"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_update_profile"
+                android:layout_width="216dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="?attr/colorSecondary"
+                android:padding="12dp"
+                android:text="@string/update_profile"
+                android:textAllCaps="false"
+                android:textColor="?android:attr/textColorSecondary"
+                tools:ignore="VisualLintButtonSize" />
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Logout"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:textColor="@android:color/white"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Update Profile Button -->
+
+    <!--    <com.google.android.material.button.MaterialButton-->
+
+    <!--        android:id="@+id/btn_login"-->
+
+    <!--        style="@style/Widget.MaterialComponents.Button.OutlinedButton"-->
+
+    <!--        android:layout_width="wrap_content"-->
+
+    <!--        android:layout_height="83dp"-->
+
+    <!--        android:layout_below="@+id/my_toolbar"-->
+
+    <!--        android:layout_alignParentStart="true"-->
+
+    <!--        android:layout_alignParentEnd="true"-->
+
+    <!--        android:layout_marginStart="100dp"-->
+
+    <!--        android:layout_marginLeft="@dimen/margin_small"-->
+
+    <!--        android:layout_marginTop="113dp"-->
+
+    <!--        android:layout_marginEnd="125dp"-->
+
+    <!--        android:layout_marginRight="@dimen/margin_small"-->
+
+    <!--        android:background="#62407F83"-->
+
+    <!--        android:drawableTop="@drawable/ic_academic_resources1"-->
+
+    <!--        android:gravity="center"-->
+
+    <!--        android:text="@string/login_sign_up"-->
+
+    <!--        android:textAlignment="center"-->
+
+    <!--        android:textColor="?android:attr/textColorPrimary"-->
+
+    <!--        app:backgroundTint="@null"-->
+
+    <!--        app:cornerRadius="@dimen/card_corner_radius"-->
+
+    <!--        app:iconGravity="textTop"-->
+
+    <!--        app:iconSize="@dimen/grid_icon_size"-->
+
+    <!--        app:iconTint="@null"-->
+
+    <!--        app:iconTintMode="multiply"-->
+
+    <!--        app:layout_columnSpan="1"-->
+
+    <!--        app:layout_gravity="fill"-->
+
+    <!--        app:strokeColor="?attr/colorSecondary"-->
+
+    <!--        tools:ignore="TextContrastCheck,TextSizeCheck,VisualLintButtonSize" />-->
+
+</RelativeLayout>

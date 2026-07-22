@@ -1,0 +1,22 @@
+<resources>
+    <!-- Margins -->
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+
+    <!-- Padding -->
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+
+    <!-- Card -->
+    <dimen name="card_corner_radius">12dp</dimen>
+    <dimen name="card_elevation">6dp</dimen>
+
+    <!-- Toolbar -->
+    <dimen name="toolbar_icon_size">40dp</dimen>
+
+    <!-- Grid Buttons -->
+    <dimen name="grid_button_height">140dp</dimen>
+    <dimen name="grid_icon_size">70dp</dimen>
+</resources>
